@@ -1,0 +1,21 @@
+[package]
+name = "xorfbench"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bloomfilter = "3.0"
+rapidhash = "4.4"
+uuid = { version = "1", features = ["v7"] }
+xorf = { version = "0.12.0", features = ["serde"] }
+
+[dev-dependencies]
+criterion = "0.8"
+
+[[bench]]
+name = "speed"
+harness = false
+
+[[bench]]
+name = "contains"
+harness = false
